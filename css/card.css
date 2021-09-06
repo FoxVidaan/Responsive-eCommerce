@@ -1,0 +1,52 @@
+:root {
+    --card-title-color: #02448a;
+    --card-star-color: #1195a7;
+    --card-price-color: #e94e95;
+}
+
+.card-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.card {
+    cursor: pointer;
+    width: 250px;
+    border-radius: 15px;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.22);
+}
+
+.card-img {
+    height: 350px;
+    width: 100%;
+}
+
+.card-img img {
+    border-radius: 15px 15px 0 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 5px;
+}
+
+.card-title {
+    margin: 0;
+    color: var(--card-title-color);
+}
+
+.card-star {
+    color: var(--card-star-color);
+}
+
+.card-price {
+    color: var(--card-price-color);
+}

@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Responsive eCommmerce Website</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header>
+    <nav class="navbar">
+        <div class="navbar-brand">
+            <h1><a href="#">eWatch</a></h1>
+        </div>
+        <div class="navbar-collapse">
+            <ul class="nav-list">
+                <li class="nav-item"><a class="-link" href="#">Home</a></li>
+                <li class="nav-item"><a class="-link" href="#">Products</a></li>
+                <li class="nav-item"><a class="-link" href="#">About</a></li>
+                <li class="nav-item"><a class="-link" href="#">Contact</a></li>
+                <li class="nav-item"><a class="-link" href="#">Account</a></li>
+            </ul>
+        </div>
+        <div class="cart">
+            <a class="cart-link" href="#">
+                <span class="cart-item">1</span>
+                <ion-icon name="cart"></ion-icon>
+            </a>
+        </div>
+        <div class="burger-container" onclick="this.parentNode.classList.toggle('open')">
+            <i class="burger"></i>
+        </div>
+    </nav>
+</header>
+<section>
+    <h2>All products</h2>
+    <div class="card-list">
+        <div class="card">
+            <div class="card-img">
+                <img src="img/apple-watch.jpg" alt="Image de l'article">
+            </div>
+            <div class="card-info">
+                <h3 class="card-title">Apple Watch</h3>
+                <span class="card-star">
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star-half"></ion-icon>
+                </span>
+                <span class="card-price">250 €</span>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-img">
+                <img src="img/fitbit.jpg" alt="Image de l'article">
+            </div>
+            <div class="card-info">
+                <h3 class="card-title">Fitbit</h3>
+                <span class="card-star">
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star-outline"></ion-icon>
+                </span>
+                <span class="card-price">25 €</span>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-img">
+                <img src="img/xiaomi-band.jpg" alt="Image de l'article">
+            </div>
+            <div class="card-info">
+                <h3 class="card-title">Xiaomi Band</h3>
+                <span class="card-star">
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star-half"></ion-icon>
+                    <ion-icon name="star-outline"></ion-icon>
+                </span>
+                <span class="card-price">40 €</span>
+            </div>
+        </div>
+    </div>
+</section>
+<script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+</body>
+</html>

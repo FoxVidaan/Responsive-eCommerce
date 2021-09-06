@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+@import "navbar.css";
+@import "card.css";
+
+:root {
+    --font-color: #0f3862;
+}
+
+body {
+    min-height: 100vh;
+    margin: 0;
+}
+
+* {
+    font-family: Nunito;
+    color: var(--font-color);
+}
+
+section {
+    padding: 10px;
+}
+
+a {
+    text-decoration: none;
+}

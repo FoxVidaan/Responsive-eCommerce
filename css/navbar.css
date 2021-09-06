@@ -1,0 +1,155 @@
+:root {
+    --navbar-color: white;
+    --navbar-link-color: #165ca4;
+}
+
+.navbar {
+    background: var(--navbar-color);
+    padding: 5px;
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+    height: 40px;
+    border-bottom: 2px solid var(--font-color);
+}
+
+.navbar-brand h1 {
+    margin: 0;
+}
+
+.burger-container {
+    display: none;
+    position: relative;
+    height: 50px;
+    width: 50px;
+}
+
+.burger, .burger::before, .burger::after {
+    position: absolute;
+    height: 2px;
+    background: var(--font-color);
+}
+
+.burger {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 20px;
+    transition: background 0.2s;
+}
+
+.navbar.open .burger {
+    background: none;
+}
+
+.burger::before, .burger::after {
+    content: " ";
+    transition: 0.4s;
+    right: 0;
+}
+
+.burger::before {
+    width: 25px;
+    position: absolute;
+    top: -8px;
+}
+
+.burger::after {
+    width: 15px;
+    position: absolute;
+    top: 8px;
+}
+
+.navbar.open .burger::before,
+.navbar.open .burger::after {
+    width: 25px;
+    top: 50%;
+    right: 50%;
+}
+
+.navbar.open .burger::before {
+    transform: translate(50%, -50%) rotate(-45deg);
+}
+.navbar.open .burger::after {
+    transform: translate(50%, -50%) rotate(45deg);
+}
+
+.navbar-collapse {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-left: auto;
+}
+
+.nav-list {
+    display: flex;
+    padding-inline-start: 0;
+    list-style: none;
+    gap: 15px;
+}
+
+.nav-item {
+    padding: 0 10px;
+}
+
+.nav-item a {
+    color: var(--navbar-link-color);
+}
+
+.nav-item:hover {
+    font-weight: bold;
+}
+
+.cart {
+    padding: 10px;
+    font-size: 2em;
+    height: min-content;
+}
+
+.cart-link {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.cart-item {
+    color: white;
+    position: absolute;
+    top: 5px;
+    left: calc(50% + 1px);
+    transform: translateX(-50%);
+    font-size: 10px;
+    font-weight: bold;
+    z-index: 1;
+}
+
+@media screen and (max-width: 650px){
+    .burger-container {
+        display: block;
+    }
+
+    .navbar .navbar-collapse {
+        display: none;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        background: var(--navbar-color);
+        border-left: 2px solid var(--font-color);
+        border-bottom: 2px solid var(--font-color);
+        border-radius: 0 0 0 20px;
+    }
+
+    .navbar.open .navbar-collapse {
+        display: block;
+    }
+
+    .nav-list {
+        flex-direction: column;
+        text-align: right;
+    }
+
+    .nav-item {
+        padding: 0 20px;
+    }
+}
